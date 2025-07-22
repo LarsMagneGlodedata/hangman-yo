@@ -1,0 +1,36 @@
+:root {
+  --primary-color: #73c2be;
+  --secondary-color: #73eedc;
+  --background-color: white;
+  --font-color: #73c2be;
+  --heading-font: ;
+  --spacing: ;
+  --default-padding: 1em;
+  --default-margin: 1em;
+  --default-border-radius: 15px;
+  --default-box-shadow: 0 0 5px 1px var(--secondary-color);
+  --p-size: 26px;
+  --p-size-mobile: 20px;
+  --h1-size: 40px;
+  --h1-size-mobile: 30px;
+  --h2-size: 24px;
+  --h3-size: 20px;
+  --img-size: ;
+  --default-width: 33%;
+  --default-height: 10%;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0;
+  transition: 0.4s;
+}
+
+.flex-style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
