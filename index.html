@@ -9,19 +9,37 @@
     <script type="module" src="script.js"></script>
   </head>
   <body>
-    <main>
+    <main class="flex-style">
       <h1>Hangman</h1>
-      <div id="hangmanContainer">
-        <div id="figur1"></div>
-        <div id="figur2"></div>
-        <div id="figur3"></div>
-        <div id="figur4"></div>
-        <div id="figur5"></div>
-        <div id="figur6"></div>
-        <div id="figur7"></div>
-        <div id="figur8"></div>
-        <div id="figur9"></div>
-        <div id="figur10"></div>
+      <div id="hangman">
+        <div id="wrongContainer"></div>
+        <div class="figurer" id="figur1"></div>
+        <div class="figurer" id="figur2"></div>
+        <div class="figurer" id="figur3"></div>
+        <div class="figurer" id="figur4"></div>
+        <div class="figurer" id="figur5"></div>
+        <div class="figurer" id="figur6"></div>
+        <div class="figurer" id="figur7"></div>
+        <div class="figurer" id="figur8"></div>
+        <div class="figurer" id="figur9"></div>
+        <div class="figurer" id="figur10"></div>
+        <div id="wordContainer">
+          <form id="formWord">
+            <label for="word"></label>
+            <input type="text" id="word" name="word" placeholder="enter a word">
+          </form>
+        </div>
+      </div>
+      <div id="gameOver">
+        <h2 id="gameOverText">GAME OVER</h2>
+        <button class="reset">Play again!</button>
+      </div>
+      <div id="winner">
+        <h2 id="winnerText">WINNER WINNER CHICKEN DINNER!</h2>
+        <button class="reset">Play again!</button>
+      </div>
+      <div id="bokstavContainer">
+        <!-- .JS -->
       </div>
     </main>
   </body>

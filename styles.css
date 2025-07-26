@@ -1,32 +1,307 @@
+h1 {
+    margin: var(--default-margin);
+}
+
+#hangman {
+    position: relative;
+    width: 500px;
+    min-height: 500px;
+    background-color: var(--secondary-color);
+    margin: var(--default-margin);
+    border-radius: var(--default-border-radius);
+}
+
 #figur1 {
+    position: absolute;
+    top: 440px;
+    left: calc(50% - 100px);
+    width: 200px;
+    height: 10px;
+    background-color: var(--background-color);
+    opacity: 0;
 }
 
 #figur2 {
+    position: absolute;
+    left: 170px;
+    top: 140px;
+    width: 10px;
+    height: 300px;
+    background-color: var(--background-color);
+    opacity: 0;
 }
 
 #figur3 {
+    position: absolute;
+    left: 150px;
+    top: 150px;
+    width: 150px;
+    height: 10px;
+    background-color: var(--background-color);
+    opacity: 0;
 }
 
-#figru4 {
+#figur3::before {
+    position: absolute;
+    top: 22px;
+    left: -5px;
+    box-shadow: 10px 15px 0 0 var(--background-color);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    content: "";
+    width: 70px;
+    height: 10px;
+}
+
+#figur4 {
+    position: absolute;
+    width: 10px;
+    height: 50px;
+    top: 160px;
+    left: 280px;
+    background-color: var(--background-color);
+    opacity: 0;
 }
 
 #figur5 {
-}
-
-#figru6 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    top: 200px;
+    left: 260px;
+    background-color: var(--background-color);
+    opacity: 0;
 }
 
 #figur6 {
+    position: absolute;
+    width: 45px;
+    height: 120px;
+    border-radius: 50%;
+    top: 240px;
+    left: 263px;
+    background-color: var(--background-color);
+    opacity: 0;
 }
 
+
+
 #figur7 {
+    position: absolute;
+    transform: rotate(30deg);
+    width: 10px;
+    height: 70px;
+    border-radius: 35%;
+    top: 245px;
+    left: 250px;
+    background-color: var(--background-color);
+    opacity: 0;
 }
 
 #figur8 {
+    position: absolute;
+    transform: rotate(-30deg);
+    width: 10px;
+    height: 70px;
+    border-radius: 35%;
+    top: 245px;
+    left: 310px;
+    background-color: var(--background-color);
+    opacity: 0;
 }
 
-#figru9 {
+#figur9 {
+    position: absolute;
+    transform: rotate(8deg);
+    width: 15px;
+    height: 90px;
+    border-radius: 35%;
+    top: 325px;
+    left: 265px;
+    background-color: var(--background-color);
+    opacity: 0;
 }
 
-#figru10 {
+#figur10 {
+    position: absolute;
+    transform: rotate(174deg);
+    width: 15px;
+    height: 90px;
+    border-radius: 35%;
+    top: 325px;
+    left: 290px;
+    background-color: var(--background-color);
+    opacity: 0;
+}
+
+#wrongContainer {
+    display: flex;
+    gap: 1px;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    min-height: 2em;
+    background-color: var(--font-color);
+    border-radius: var(--default-border-radius);
+}
+
+#wordContainer {
+    display: flex;
+    gap: 1px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    min-height: 2em;
+    background-color: var(--font-color);
+    border-radius: var(--default-border-radius);
+}
+
+#word {
+    border: none;
+    border-radius: var(--default-border-radius);
+    padding: 0.5em;
+    background-color: var(--font-color);
+}
+
+#bokstavContainer {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 0.5em;
+    margin: var(--default-margin);
+}
+
+.bokstaver {
+    padding: var(--default-padding);
+    border: none;
+    box-shadow: var(--default-box-shadow);
+    border-radius: var(--default-border-radius);
+    text-transform: uppercase;
+}
+
+.bokstaver:hover {
+    transform: scale(1.1);
+}
+
+.letters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid black;
+    text-transform: uppercase;
+    width: 25px;
+}
+
+#gameOver {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 500px;
+    height: 150px;
+}
+
+#gameOverText {
+    color: white;
+}
+
+#reset {
+    margin: var(--default-margin);
+    padding: var(--default-padding);
+    box-shadow: var(--default-box-shadow);
+    border-radius: var(--default-border-radius);
+}
+
+.wrongletter {
+    text-transform: uppercase;
+}
+
+#winner {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 500px;
+    height: 150px;
+}
+
+#winnerText {
+    color: white;
+}
+
+@media screen and (max-width: 600px) {
+    #hangman {
+        width: 320px;
+        margin: 0;
+    }
+
+    .bokstaver {
+        padding: 5px;
+    }
+
+    #winner {
+        width: 320px;
+    }
+
+    #winnerText {
+        padding: 0.5em 2em;
+    }
+
+    #gameOver {
+        width: 320px;
+    }
+
+    #gameOverText {
+        padding: 1em;
+    }
+
+    #figur2 {
+        left: 80px;
+    }
+
+    #figur3 {
+        left: 60px;
+    }
+
+    #figur4 {
+        left: 180px;
+    }
+
+    #figur5 {
+        left: 160px;
+    }
+
+    #figur6 {
+        left: 163px;
+    }
+
+    #figur7 {
+        left: 150px;
+    }
+
+    #figur8 {
+        left: 210px;
+    }
+
+    #figur9 {
+        left: 165px;
+    }
+
+    #figur10 {
+        left: 190px;
+    }
 }

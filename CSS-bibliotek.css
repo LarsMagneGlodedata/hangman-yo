@@ -1,14 +1,14 @@
 :root {
   --primary-color: #73c2be;
-  --secondary-color: #73eedc;
-  --background-color: white;
-  --font-color: #73c2be;
+  --secondary-color: #C4F1BE;
+  --background-color: #073B4C;
+  --font-color: #E4DFDA;
   --heading-font: ;
   --spacing: ;
   --default-padding: 1em;
   --default-margin: 1em;
   --default-border-radius: 15px;
-  --default-box-shadow: 0 0 5px 1px var(--secondary-color);
+  --default-box-shadow: 0 0 5px 0 black;
   --p-size: 26px;
   --p-size-mobile: 20px;
   --h1-size: 40px;
@@ -33,4 +33,5 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
