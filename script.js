@@ -99,11 +99,12 @@ document.addEventListener('DOMContentLoaded', () => {
         isWord = true
         console.log(isWord)
         wordData = word.value.split('').map((char, index) => {
+            const isSpace = char === ' '
             return {
                 char: char,
                 value: char,
                 position: index,
-                guessed: false
+                guessed: isSpace
             }
         })
         word.value = ''
